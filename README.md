@@ -1,5 +1,7 @@
 # Multimodal AI Document Analysis
 
+### Python | Jupyter Notebooks | Claude API | Image & PDF Analysis | Source Citations
+
 ## Overview
 
 This repository contains a set of Python and Claude API projects focused on multimodal analysis across images and PDF documents.
@@ -14,11 +16,17 @@ Together, they show how multimodal AI can support more structured analysis of vi
 
 ### 1. Image Support – Fire Risk Assessment
 
-**File:** `Claude_Image_Support_Fire_Risk_Assessment_v1.ipynb`
+**Notebook:** [`Claude_Image_Support_Fire_Risk_Assessment_v1.ipynb`](notebooks/Claude_Image_Support_Fire_Risk_Assessment_v1.ipynb)
 
 Demonstrates image analysis using Claude's multimodal capabilities.
 
 The project uses an image as input and asks Claude to identify visual conditions relevant to fire risk.
+
+#### Fire Risk Assessment: Visual Demonstration
+
+![AI-powered fire risk assessment infographic illustrating tree canopy, vegetation, defensible space, and a demonstration risk rating](visualizations/fire_risk_assessment_demo.png)
+
+*Illustrative portfolio graphic based on the fire-risk notebook's example image analysis. The demonstration identifies visible tree overhang, dense vegetation, and limited defensible space, with an example Level 4 (Severe Risk) rating. This is an image-based AI screening exercise, not a certified wildfire hazard inspection or a validated property risk determination.*
 
 Key concepts:
 
@@ -34,7 +42,7 @@ This project illustrates how AI can extract useful information from images rathe
 
 ### 2. PDF Support – Earth Summary
 
-**File:** `Claude_PDF_Support_Earth_Summary_V2.ipynb`
+**Notebook:** [`Claude_PDF_Support_Earth_Summary_V2.ipynb`](notebooks/Claude_PDF_Support_Earth_Summary_V2.ipynb)
 
 Demonstrates direct PDF document analysis with Claude.
 
@@ -54,7 +62,7 @@ This project shows how AI can analyze document content directly without requirin
 
 ### 3. PDF Question Answering with Citations
 
-**File:** `Claude_PDF_Support_Earth_Summary_v1.ipynb`
+**Notebook:** [`Claude_PDF_Support_Earth_Summary_v1.ipynb`](notebooks/Claude_PDF_Support_Earth_Summary_v1.ipynb)
 
 Extends PDF analysis by enabling source citations in Claude's response.
 
@@ -100,6 +108,24 @@ The workflow illustrates how the same language-model interface can be extended b
 
 ---
 
+## Repository Structure
+
+```text
+multimodal-ai-document-analysis/
+├── notebooks/
+│   ├── Claude_Image_Support_Fire_Risk_Assessment_v1.ipynb
+│   ├── Claude_PDF_Support_Earth_Summary_V2.ipynb
+│   └── Claude_PDF_Support_Earth_Summary_v1.ipynb
+├── visualizations/
+│   └── fire_risk_assessment_demo.png
+├── .gitignore
+└── README.md
+```
+
+The Jupyter notebooks retain their original example code and recorded demonstration outputs. The `visualizations/` folder holds the fire-risk portfolio infographic.
+
+---
+
 ## Technologies and Concepts
 
 Projects in this repository use or explore:
@@ -133,6 +159,32 @@ api_key = os.getenv("ANTHROPIC_API_KEY")
 ```
 
 Local `.env` files containing credentials should never be committed to source control.
+
+---
+
+## Running the Notebooks
+
+Install the notebook environment and supporting Python packages:
+
+```bash
+pip install notebook anthropic python-dotenv
+jupyter notebook
+```
+
+Open a notebook from the `notebooks/` directory. Provide a valid `ANTHROPIC_API_KEY` through your local environment or an untracked `.env` file.
+
+**External demonstration inputs:** The notebooks reference `images/prop7.png` (property image) and `earth.pdf` (PDF source). These input files are not included in the public repository; supply your own example files using the paths expected by the running notebook. Relative paths are resolved from the notebook kernel's working directory.
+
+The original notebooks contain completed example outputs. Re-running the exercises requires access to an available Claude model and compatible API SDK; some example settings may need updating as model availability changes.
+
+---
+
+## Demonstration Scope and Limitations
+
+- The fire-risk example interprets visible property features from an image. It does not validate on-site conditions, unseen hazards, actual fire behavior, or professionally certified risk scores.
+- PDF summaries and citation-enabled answers are model-generated and should be checked against the source document.
+- The notebooks are instructional demonstrations of multimodal API workflows rather than a deployed property-inspection or document-review application.
+- Public repository materials do not include private API credentials or the original input images and PDF.
 
 ---
 
@@ -178,7 +230,7 @@ This is especially important when AI-generated information needs to be reviewed 
 
 ---
 
-## Repository Purpose
+## Project Significance
 
 This repository demonstrates practical experience with:
 
@@ -240,3 +292,15 @@ Potential extensions include:
 This repository contains three projects demonstrating image understanding, PDF summarization, and citation-grounded document analysis.
 
 These projects provide a foundation for more advanced workflows involving evidence-based AI, research assistance, document intelligence, and multimodal decision support.
+
+---
+
+**Project Type:** Applied AI & Multimodal Document Analysis Portfolio Project  
+**Technologies:** Python, Jupyter Notebook, Anthropic Claude API, Anthropic Python SDK, python-dotenv  
+**Core Methods:** Multimodal Prompting, Image Interpretation, PDF Summarization, Citation-Grounded Question Answering  
+**Data Classification:** Demonstration Inputs / Illustrative Portfolio Visualization  
+**Project Status:** Completed Multimodal Analysis Notebook Collection  
+**Repository Scope:** Three Jupyter Notebooks, Recorded Example Outputs, and Portfolio Visualization  
+
+**Developed by Glahnnia "Renee" Rates, MSHS, CCHW II**  
+Public Health Informatics | Applied AI | Workforce Development | Data Analytics

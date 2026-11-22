@@ -1,0 +1,12 @@
+# Local credentials and environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Jupyter / Python local files
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
